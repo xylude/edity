@@ -8,15 +8,19 @@
             var height = $(this).height();
             var id = "edity-the-editor_"+i;
             var buttons = ['bold','italic'];
+            var image_path = 'images/';
             if(opts) {
                 if(opts.buttons) {
                     buttons = opts.buttons;
-                }                
+                }
+                if(opts.images_dir) {
+                    image_path = opts.image_path;
+                }
             }
             
             btn_html = '';
             for(i=0;i<buttons.length;i++) {
-                btn_html+='<li class="edity-the-editor_'+buttons[i]+'">'+buttons[i]+'</li>';
+                btn_html+='<li class="edity-the-editor_'+buttons[i]+'"><img src="'+images_dir+buttons[i]+'.png" /></li>';
             }
             
             var action_bar = "<ul class='edity-the-editor_action_bar'>"+btn_html+"</ul>";
