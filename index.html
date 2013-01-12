@@ -7,10 +7,15 @@
     </head>
     <body>
         <p>Textarea</p>
-        <p><textarea style="width:400px;height:400px;" class="rte">ASDF</textarea></p>
+        <p><textarea style="width:400px;height:100px;" class="rte">ASDF</textarea></p>
         <script>
             $(document).ready(function(){
-               $('.rte').edity(); 
+               $('.rte').edity({
+                   buttons: ['bold'],
+                   onchange: function(el,txt) {
+                       console.log(txt);
+                   }
+               }); 
             });
         </script>
     </body>

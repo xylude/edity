@@ -1,0 +1,13 @@
+.edity-the-editor_action_bar {
+    margin:0;
+    padding:0;
+}
+.edity-the-editor_action_bar li {
+    list-style:none;
+    background: #eee;
+    border-radius: 3px;
+    padding:3px;
+    margin:3px;
+    display:inline-block;
+    cursor:pointer;
+}
