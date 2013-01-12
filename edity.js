@@ -13,21 +13,21 @@
                 if(opts.buttons) {
                     buttons = opts.buttons;
                 }
-                if(opts.images_dir) {
+                if(opts.image_path) {
                     image_path = opts.image_path;
                 }
             }
             
             btn_html = '';
             for(i=0;i<buttons.length;i++) {
-                btn_html+='<li class="edity-the-editor_'+buttons[i]+'"><img src="'+images_dir+buttons[i]+'.png" /></li>';
+                btn_html+='<li class="edity-the-editor_'+buttons[i]+'"><img src="'+image_path+buttons[i]+'.png" /></li>';
             }
             
             var action_bar = "<ul class='edity-the-editor_action_bar'>"+btn_html+"</ul>";
-            var iframe = "<iframe id='"+id+"' style='width:"+width+"px;height:"+height+"px;'></iframe>";
+            var iframe = "<iframe frameborder='0' scrolling='yes' id='"+id+"'></iframe>";
             
             $(this).hide();
-            $(this).before(action_bar+iframe);
+            $(this).before("<div class='edity-the-editor_wrapper' style='width:"+width+"px;height:"+height+"px;'>"+action_bar+iframe+"</div>");
             var win = document.getElementById(id).contentWindow;
             var doc = document.getElementById(id).contentDocument;
             

@@ -1,10 +1,21 @@
+.edity-the-editor_wrapper {
+    border: 1px solid #eee;
+}
+.edity-the-editor_wrapper iframe {
+    width:100%;
+    border: 1px solid #eee;
+    border: none;
+}
 .edity-the-editor_action_bar {
     margin:0;
     padding:0;
+    background: #eee;
+    border: none;
 }
 .edity-the-editor_action_bar li {
     list-style:none;
     background: #eee;
+    border: 1px solid #ccc;
     border-radius: 3px;
     padding:3px;
     margin:3px;
