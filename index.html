@@ -24,17 +24,18 @@
 
         <script>
             $(document).ready(function(){
-                $('.sort_me').sortable({
-                    stop: function(){
-                        $('.rte').edity().reinitialize(); 
-                    }
-                });
-                $('.rte').edity({
+                var opts = {
                     buttons: ['bold','strikeThrough','superscript'],
                     onchange: function(el,txt) {
                        
                     }
-                }); 
+                };
+                $('.sort_me').sortable({
+                    stop: function(){
+                        $('.rte').edity(opts).reinitialize(); 
+                    }
+                });
+                $('.rte').edity(opts); 
             });
         </script>
     </body>
