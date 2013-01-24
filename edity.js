@@ -12,6 +12,13 @@
                 var original_val = $(this).val();
                 var width = $(this).width();
                 var height = $(this).height();
+                if(height==0) {
+                    height = 100;
+                }
+                if(width==0) {
+                    width=100;
+                }
+                
                 var id = "edity-the-editor_"+i;
                 var buttons = ['bold','italic'];
                 var image_path = 'images/';
@@ -37,7 +44,9 @@
                 var win = document.getElementById(id).contentWindow;
                 var doc = document.getElementById(id).contentDocument;
             
-                win.document.write(original_val);
+                if(original_val) {
+                    win.document.write(original_val);
+                }
                 doc.designMode = "on";
             
                 var iframeBody=$('#'+id).contents().find('body');
