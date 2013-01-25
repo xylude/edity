@@ -66,6 +66,7 @@
                     win.document.execCommand(cmd,false,'');
                     //get current text:
                     console.log('command '+cmd);
+                    textarea.val(iframeBody.html());
                     if(opts) {
                         if(opts.onchange) {
                             opts.onchange(textarea,iframeBody.html());
