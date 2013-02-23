@@ -11,14 +11,39 @@
     padding:0;
     background: #eee;
     border: none;
+    height:25px;
 }
-.edity-the-editor_action_bar li {
+.edity-the-editor_action_bar>li {
     list-style:none;
-    background: #eee;
+    background: none;
     border: 1px solid #ccc;
     border-radius: 3px;
     padding:3px;
     margin:3px;
     display:inline-block;
     cursor:pointer;
+    max-height: 100%;
+    background-size:100% 100%;
+    width: 15px;
+    height: 15px;
+}
+.edity-the-editor_action_bar li ul {
+    display:none;
+    width: 25px;
+    margin:0;
+    padding:0;
+    position:relative;
+    top: 15px;
+    background: #fff;
+    border: 1px solid #999;
+}
+.edity-the-editor_action_bar li ul li {
+    display:inline-block;
+    width:100%;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+.edity-the-editor_action_bar li ul li:hover {
+    background: #aaa;
 }
